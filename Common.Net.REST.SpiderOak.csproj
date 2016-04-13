@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6335547E-B80B-4894-BF41-816165A100AA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Common.Net.REST.SpiderOak</RootNamespace>
+    <AssemblyName>Common.Net.REST.SpiderOak</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\AnyCpu\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Base32, Version=1.1.0.2, Culture=neutral, PublicKeyToken=3427d4dc8cee30c6, processorArchitecture=MSIL">
+      <HintPath>..\packages\Base32.1.1.0.2\lib\portable-net40+sl50+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\Base32.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Net.REST, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Net.REST.1.0.0.1\lib\net40\Common.Net.REST.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Runtime.Serialization, Version=0.9.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Runtime.Serialization.0.9.0.1\lib\net40\Common.Runtime.Serialization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="v1\SpiderOakVersionInfo.cs" />
+    <Compile Include="v1\SpiderOakDeviceInfo.cs" />
+    <Compile Include="v1\SpiderOakStorageStats.cs" />
+    <Compile Include="v1\Storage\Content\SpiderOakStorageVersionInfoResponseContent.cs" />
+    <Compile Include="v1\Share\SpiderOakShareRequest.cs" />
+    <Compile Include="v1\Share\SpiderOakShareResponse.cs" />
+    <Compile Include="v1\SpiderOakDirectoryInfo.cs" />
+    <Compile Include="v1\SpiderOakFileInfo.cs" />
+    <Compile Include="v1\Share\Content\SpiderOakShareListResponseContent.cs" />
+    <Compile Include="v1\SpiderOakShareStats.cs" />
+    <Compile Include="v1\Share\SpiderOakShareListRequest.cs" />
+    <Compile Include="v1\Share\SpiderOakShareListResponse.cs" />
+    <Compile Include="v1\Storage\SpiderOakStorageGetFileRequest.cs" />
+    <Compile Include="v1\Storage\SpiderOakStorageGetFileResponse.cs" />
+    <Compile Include="v1\Storage\SpiderOakStorageVersionInfoRequest.cs" />
+    <Compile Include="v1\Storage\SpiderOakStorageVersionInfoResponse.cs" />
+    <Compile Include="v1\SpiderOakSyncFolderInfo.cs" />
+    <Compile Include="v1\Storage\Content\SpiderOakStorageListResponseContent.cs" />
+    <Compile Include="v1\Storage\SpiderOakStorageListRequest.cs" />
+    <Compile Include="v1\Storage\SpiderOakStorageListResponse.cs" />
+    <Compile Include="v1\Transformation\DirectoryTransformation.cs" />
+    <Compile Include="v1\Storage\Content\SpiderOakStorageDeviceListResponseContent.cs" />
+    <Compile Include="v1\Storage\SpiderOakStorageDeviceListRequest.cs" />
+    <Compile Include="v1\Storage\SpiderOakStorageDeviceListResponse.cs" />
+    <Compile Include="v1\Transformation\Base32Transformation.cs" />
+    <Compile Include="v1\Transformation\UnixTimeStampTransformation.cs" />
+    <Compile Include="SpiderOakRequest.cs" />
+    <Compile Include="SpiderOakResponse.cs" />
+    <Compile Include="v1\Storage\SpiderOakStorageRequest.cs" />
+    <Compile Include="v1\Storage\SpiderOakStorageResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
